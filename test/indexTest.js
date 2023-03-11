@@ -24,6 +24,14 @@ describe( 'index.js', () => {
     } );
   } );
 
+  function writeCards(names, occasion) {
+    const messages = [];
+    for (let i = 0; i < names.length; i++) {
+      messages.push(`Thank you, ${names[i]}, for the wonderful ${occasion} gift!`);
+    }
+    return messages;
+  }
+
   describe( 'countDown()', () => {
     afterEach( () => {
       spy.restore();
@@ -49,4 +57,11 @@ describe( 'index.js', () => {
         .to.be.true;
     } );
   } );
+
+  function countDown(num) {
+    for (let i = num; i >= 0; i--) {
+      console.log(i);
+    }
+  }
+
 } );
